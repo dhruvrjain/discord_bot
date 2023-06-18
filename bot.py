@@ -1,30 +1,29 @@
+# Importing the necessaary modules
 import discord
 import random
 from discord.ext import commands
 
-intents = discord.Intents.all()
+# Specifying the intents of the bot
+intents = discord.Intents.default()
+intents.members=True
+intents.message_content=True
 
+# Bot creation
 bot = commands.Bot(command_prefix='/', intents=intents)
 
-
-@bot.command()
-async def info(ctx):
-    await ctx.send("I've been here the entire time........ 🤖\n\nYou can use the following commands to interact with me\n\t      /ping - I'll respond with 'pong'\n\t      /kill @someone - I'll kill the person you want me to, with one of my breathing forms......😈")
-
-
-@bot.command(name='ping')
-async def ping(ctx):
-    await ctx.send("pong")
-
-# @bot.command()
-# async def test(ctx):
-#     await ctx.send("Test successful")
-
-
+# Prompt to display the successful running of the bot
 @bot.event
 async def on_ready():
     print("Successfully logged in! Logged in as ", bot.user.name)
 
+# Defining the bot commands
+@bot.command()
+async def info(ctx):
+    await ctx.send("I've been here the entire time........ 🤖\n\nYou can use the following commands to interact with me\n\t      /ping - I'll respond with 'pong'\n\t      /kill @someone - I'll kill the person you want me to, with one of my breathing forms......😈")
+
+@bot.command()
+async def ping(ctx):
+    await ctx.send("pong")
 
 @bot.event
 async def on_message(message):
@@ -46,4 +45,5 @@ async def on_message(message):
         await message.channel.send(f'{str(message.author.mention)} killed {text[5:]}😵😵')
     await bot.process_commands(message)
 
-bot.run("MTExOTU5MDA0MjI1MjM1NzY4Mg.GvF3kt.VAoyXH1eCqwRQbbzS3QC8UO56d1ab6Qt5BdVuM")
+# Replace 'PASTE_YOUR_TOKEN_HERE' with your respective bot's token
+bot.run("PASTE_YOUR_TOKEN_HERE")
