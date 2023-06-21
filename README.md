@@ -58,7 +58,8 @@ Once the bot is running and connected to your server, you can use the following 
 
 - `/info` - Displays information about the bot and available commands.
 - `/ping` - Responds with "pong".
-- `/kill @someone` - Simulates a moon-breathing attack on the mentioned user.
+- `/kill @someone` - Simulates a moon-breathing attack on the mentioned user.( Try to kill yourself or the bot )
+- `/sorry` - Appologize to the bot after killing it
 
 ## Contributing
 

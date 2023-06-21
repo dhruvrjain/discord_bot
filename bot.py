@@ -19,7 +19,7 @@ async def on_ready():
 # Defining the bot commands
 @bot.command()
 async def info(ctx):
-    await ctx.send("I've been here the entire time........ 🤖\n\nYou can use the following commands to interact with me\n\t      /ping - I'll respond with 'pong'\n\t      /kill @someone - I'll kill the person you want me to, with one of my breathing forms......😈")
+    await ctx.send("I've been here the entire time........ 🤖\n\nYou can use the following commands to interact with me\n\t      /info - View the list of all ways to interact with me\n\t      /ping - I'll respond with 'pong'\n\t      /kill @someone - I'll kill the person you want me to, with one of my breathing forms......😈 But don't try to kill me or yourself.\n\t      /sorry - Appologize to me if you violate my rules")
 
 @bot.command()
 async def ping(ctx):
