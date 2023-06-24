@@ -99,4 +99,4 @@ async def sorry(ctx):
     return
 
 # Replace 'PASTE_YOUR_TOKEN_HERE' with your respective bot's token
-bot.run("MTExOTU5MDA0MjI1MjM1NzY4Mg.GijTU3.0N0peVXvvVmB5y8TtmhRN9pl07resFHp3ezVVk")
+bot.run("PASTE_YOUR_TOKEN_HERE")
